@@ -7,7 +7,7 @@ def remove_commands(query: str) -> str:
     query = re.sub(r'\/page:(\S+)\s+', '', query)
     query = re.sub(r'\/site:(\S+)\s+', '', query)
     return query
-
+    
 
 def compile_prompt(results: List[SearchResult], query: str, default_prompt: str) -> str:
     formatted_results = format_web_results(results)
